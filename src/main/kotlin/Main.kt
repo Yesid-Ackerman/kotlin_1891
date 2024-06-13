@@ -1,140 +1,92 @@
 fun main() {
-//    println(1 == 2)  = False
-//    println(1 == 2)  = True
-//    println(1 < 1) = False
-//    val trafficLightColor = "Red"
-
-//    if (trafficLightColor == "Red") {
-//        println("Stop")
-//    } = Stop
-
-//    val trafficLightColor = "Blue"
-
-//    if (trafficLightColor == "Black") {
-//        println("Stop")
-//    } else {
-//        println("Go") = Go
-//    }
-
    /*
-   val trafficLightColor = "Yellow"
-
-    if (trafficLightColor == "Red") {
-        println("Stop")
-    } else if (trafficLightColor == "Yellow") {
-        println("Slow")
-    } else {
-        println("Go")
-    } = Slow
-    */
-
-    /*
-    val trafficLightColor = "Black"
-
-    if (trafficLightColor == "Red") {
-        println("Stop")
-    } else if (trafficLightColor == "Yellow") {
-        println("Slow")
-    } else if (trafficLightColor == "Green") {
-        println("Go")
-    } else {
-        println("Invalid traffic-light color")
-
-    } = Invalid traffic-light color
+   val favoriteActor = null
+   println(favoriteActor) = null
     */
     /*
-    val trafficLightColor = "Red"
+    var favoriteActor: String? = "Hola desde Yesith "
+    println(favoriteActor)
 
-    when (trafficLightColor) {
-        "Red" -> println("Stop")
-    } = Stop
+    favoriteActor = null
+    println(favoriteActor)
+    = Hola desde Yesith
+      null
+     */
+    /*
+        var number: Int? = 10
+    println(number)
+
+    number = null
+    println(number)
+    = 10
+    null
+     */
+    /*
+    var favoriteActor: String? = "Sandra Oh"
+    println(favoriteActor.length)
+    =Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
     */
     /*
-    val trafficLightColor = "Yellow"
-
-    when (trafficLightColor) {
-        "Red" -> println("Stop")
-        "Yellow" -> println("Slow")
-        "Green" -> println("Go")
-        else -> println("Invalid traffic-light color")
-    } = Slow
-    */
-
+    var favoriteA: String? = "Hola desde Yesith"
+    println(favoriteA?.length)
+    var favoriteB: String? = null
+    println(favoriteB?.length)
+    = 17
+      null
+     */
     /*
-    val x = 30
+    var favoriteActor: String? = null
+    println(favoriteActor!!.length)
+    =   Exception in thread "main" java.lang.NullPointerException
+	    at MainKt.main(Main.kt:39)
+	    at MainKt.main(Main.kt)
+     */
+    /*
+    var favoriteActor: String? = "Yesith Jimenez CODELAB 3"
 
-    when (x) {
-        2 -> println("x is a prime number between 1 and 10.")
-        3 -> println("x is a prime number between 1 and 10.")
-        5 -> println("x is a prime number between 1 and 10.")
-        7 -> println("x is a prime number between 1 and 10.")
-        else -> println("x isn't a prime number between 1 and 10.")
+    if (favoriteActor != null) {
+        println("The number of characters in your favorite actor's name is ${favoriteActor.length}.")
     }
-     */
-
-    /*
-    val x = 3
-
-    when (x) {
-        2, 3, 5, 7 -> println("x is a prime number between 1 and 10.")
-        else -> println("x isn't a prime number between 1 and 10.")
-    } = x is a prime number between 1 and 10.
+    = The number of characters in your favorite actor's name is 24.
      */
     /*
-    val x = 4
+    var favoriteA: String? = null
 
-    when (x) {
-        2, 3, 5, 7 -> println("x is a prime number between 1 and 10.")
-        in 1..10 -> println("x is a number between 1 and 10, but not a prime number.")
-        else -> println("x isn't a prime number between 1 and 10.")
-    } = x is a number between 1 and 10, but not a prime number.
-
-     */
-    /*
-    val x: Any = 20
-
-    when (x) {
-        2, 3, 5, 7 -> println("x is a prime number between 1 and 10.")
-        in 1..10 -> println("x is a number between 1 and 10, but not a prime number.")
-        is Int -> println("x is an integer number, but not between 1 and 10.")
-        else -> println("x isn't an integer number.")
-    } = x is an integer number, but not between 1 and 10.
-     */
-    /*
-    val trafficLightColor = "Amber"
-
-    when (trafficLightColor) {
-        "Red" -> println("Stop")
-        "Yellow", "Amber" -> println("Slow")
-        "Green" -> println("Go")
-        else -> println("Invalid traffic-light color")
-    } =Slow
-
-     */
-    /*
-    val trafficLightColor = "Black"
-
-    val message =
-        if (trafficLightColor == "Red") "Stop"
-        else if (trafficLightColor == "Yellow") "Slow"
-        else if (trafficLightColor == "Green") "Go"
-        else "Invalid traffic-light color"
-
-    println(message) = Invalid traffic-light color
-
-     */
-    /*
-    val trafficLightColor = "Amber"
-
-    val message = when(trafficLightColor) {
-        "Red" -> "Stop"
-        "Yellow", "Amber" -> "Proceed with caution."
-        "Green" -> "Go"
-        else -> "Invalid traffic-light color"
+    if(favoriteA != null) {
+        println("The number of characters in your favorite actor's name is ${favoriteA.length}.")
+    } else {
+        println("You didn't input a name.")
     }
-    println(message) = Proceed with caution.
+    var favoriteB: String? = "Hola desde contador de letras de una Frase Aleatoria"
 
+    if (favoriteB != null) {
+        println("The number of characters in your favorite actor's name is ${favoriteB.length}.")
+    } else {
+        println("You didn't input a name.")
+    }
+    = You didn't input a name.
+      The number of characters in your favorite actor's name is 52.
      */
+    /*
+    val favoriteA: String? = "Contador de letras  --Cuenta los espacios--"
 
+    val lengthOfName = if(favoriteA != null) {
+        favoriteA.length
+    } else {
+        0
+    }
+
+
+    println("The number of characters in your favorite actor's name is $lengthOfName.")
+        = The number of characters in your favorite actor's name is 43.
+     */
+    /*
+    val favoriteActor: String? = "Contador de letras mas extenso para mayor numero de letras dentro de conteo"
+
+    val lengthOfName = favoriteActor?.length ?: 0
+
+    println("The number of characters in your favorite actor's name is $lengthOfName.")
+    = The number of characters in your favorite actor's name is 75.
+    */
 
 }
